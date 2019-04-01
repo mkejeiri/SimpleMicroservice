@@ -141,6 +141,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "MongoDb.Driver": {
+              "target": "Package",
+              "version": "[2.8.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

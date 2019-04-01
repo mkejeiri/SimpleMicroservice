@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using SimpleAction.Api.Handlers;
+using SimpleAction.Common.Events;
+using SimpleAction.Common.RabbitMq;
 
 namespace SimpleAction.Api
 {
@@ -25,9 +28,10 @@ namespace SimpleAction.Api
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc()
-                .AddNewtonsoftJson();
+        {            
+            services.AddMvc().AddNewtonsoftJson();
+            services.AddRabbitMq(Configuration);
+            services.AddScoped<IEventHandler<ActivityCreated>, ActivityCreatedHandler>();           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
