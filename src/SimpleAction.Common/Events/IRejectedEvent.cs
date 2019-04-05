@@ -4,6 +4,6 @@ namespace SimpleAction.Common.Events
     {
          string Reason  {get;}
          //This could be enum for tanslation, string used for simplicity
-         string code {get;}
+         string Code {get;}
     }
 }

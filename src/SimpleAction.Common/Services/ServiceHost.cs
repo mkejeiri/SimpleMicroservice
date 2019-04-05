@@ -67,11 +67,11 @@ namespace SimpleAction.Common.Services {
                 _webhost = webhost;
             }
             public BusBuilder SubscribeToCommand<TCommand> () where TCommand : ICommand {
-                // var handler = (ICommandHandler<TCommand>) _webhost.Services
-                //     .GetService (typeof (ICommandHandler<TCommand>));
+                 var handler = (ICommandHandler<TCommand>) _webhost.Services
+                    .GetService (typeof (ICommandHandler<TCommand>));
 
-                var serviceProvider = (IServiceProvider) _webhost.Services.GetService (typeof (IServiceProvider));
-                var handler = serviceProvider.CreateScope ().ServiceProvider.GetRequiredService<ICommandHandler<TCommand>> ();
+                // var serviceProvider = (IServiceProvider) _webhost.Services.GetService (typeof (IServiceProvider));
+                // var handler = serviceProvider.CreateScope ().ServiceProvider.GetRequiredService<ICommandHandler<TCommand>> ();
 
                 //this extension method should be created
                 _bus.WithCommandHandlerAsync (handler);

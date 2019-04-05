@@ -8,3 +8,9 @@ public static async Task Main(string[] args) starting C#7.0
 docker run -d -p 27017:27017
 
 "connectionString": "mongodb://user:password@localhost:27017"
+
+
+
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+
+dotnet add package Microsoft.IdentityModel.tokens

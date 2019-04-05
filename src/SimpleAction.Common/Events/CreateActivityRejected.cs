@@ -1,15 +1,16 @@
+using System;
+
 namespace SimpleAction.Common.Events {
     public class CreateActivityRejected : IRejectedEvent {
-        protected CreateActivityRejected () { }
+        protected CreateActivityRejected () {}
 
-        public CreateActivityRejected (string reason, string code, string name) {
+        public CreateActivityRejected (Guid id,string code, string reason) {
             this.Reason = reason;
-            this.code = code;
-            this.Name = name;
-
+            this.Code = code;
+            this.Id = id;
         }
         public string Reason { get; set; }
-        public string code { get; set; }
-        public string Name { get; set; }
+        public string Code { get; set; }
+        public Guid Id { get; set; }
     }
 }
