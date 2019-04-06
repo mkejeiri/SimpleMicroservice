@@ -12,7 +12,7 @@ namespace SimpleAction.Services.Identity.Repositories {
             _database = database;
         }
 
-        public async Task<User> GetAsync (string email) =>  await Collection.AsQueryable ().FirstOrDefaultAsync (x => email.Equals (x.Email));
+        public async Task<User> GetAsync (string email) =>  await Collection.AsQueryable ().FirstOrDefaultAsync (x => email.Equals (x.Email,StringComparison.OrdinalIgnoreCase));
         public async Task AddAsync (User user) => await Collection.InsertOneAsync (user);
 
         public async Task<User> GetAsync (Guid id) => await Collection.AsQueryable ().FirstOrDefaultAsync (x => x.Id.Equals (id));

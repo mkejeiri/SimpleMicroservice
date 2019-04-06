@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SimpleAction.Api.Handlers;
 using SimpleAction.Common.Events;
+using SimpleAction.Common.Mongo;
 using SimpleAction.Common.RabbitMq;
 
 namespace SimpleAction.Api
@@ -30,8 +31,10 @@ namespace SimpleAction.Api
         public void ConfigureServices(IServiceCollection services)
         {            
             services.AddMvc().AddNewtonsoftJson();
-            services.AddRabbitMq(Configuration);
-            services.AddScoped<IEventHandler<ActivityCreated>, ActivityCreatedHandler>();           
+            services.AddLogging ();
+            services.AddRabbitMq(Configuration);            
+            services.AddMongoDB (Configuration);
+            services.AddScoped<IEventHandler<ActivityCreated>, ActivityCreatedHandler>();       
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

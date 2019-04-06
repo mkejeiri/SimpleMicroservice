@@ -15,6 +15,7 @@ using RawRabbit;
 using SimpleAction.Common.Commands;
 using SimpleAction.Common.Events;
 using SimpleAction.Common.Mongo;
+using SimpleAction.Common.RabbitMq;
 using SimpleAction.Services.Activities.Handlers;
 using SimpleAction.Services.Activities.Repositories;
 using SimpleAction.Services.Activities.Services;
@@ -30,7 +31,9 @@ namespace SimpleAction.Services.Activities {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices (IServiceCollection services) {
             services.AddMvc ().AddNewtonsoftJson ();
-            services.AddMongoDB (Configuration);
+            services.AddLogging ();
+            services.AddRabbitMq (Configuration);
+            services.AddMongoDB (Configuration);        
             services.AddScoped<ICommandHandler<CreateActivity>, CreateActivityHandler> ();
             services.AddScoped<IActivityRepository, ActivityRepository> ();
             services.AddScoped<ICategoryRepository, CategoryRepository> ();

@@ -14,7 +14,7 @@ namespace SimpleAction.Services.Activities.Handlers {
         private readonly ILogger _logger;
 
         public CreateActivityHandler (IBusClient busClient, IActivityService activityService,
-        ILogger logger) {
+        ILogger<CreateActivity>  logger) {
             _busClient = busClient;
             _activityService = activityService;
             _logger = logger;
