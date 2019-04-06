@@ -10,7 +10,13 @@ docker run -d -p 27017:27017
 "connectionString": "mongodb://user:password@localhost:27017"
 
 
-
+#JWT nuget packages
 dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
-
 dotnet add package Microsoft.IdentityModel.tokens
+
+#run a web api in custom port
+dotnet run --urls "https://*:5051"
+
+#using curl add a user through a post request
+ curl localhost:5000/users -X POST -H "content-type: application/json" -d '{"email":"dummy@gmail.com", "name":"mkdummy", "password":"dummysecret"}'
+ curl localhost:5000/login -X POST -H "content-type: application/json" -d '{"email":"dummy@gmail.com", "password":"dummysecret"}'

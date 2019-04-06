@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RawRabbit;
+using SimpleAction.Common.Auth;
 using SimpleAction.Common.Commands;
 using SimpleAction.Common.Events;
 using SimpleAction.Common.Mongo;
@@ -33,7 +34,8 @@ namespace SimpleAction.Services.Activities {
             services.AddMvc ().AddNewtonsoftJson ();
             services.AddLogging ();
             services.AddRabbitMq (Configuration);
-            services.AddMongoDB (Configuration);        
+            services.AddMongoDB (Configuration);  
+            services.AddJwt(Configuration);      
             services.AddScoped<ICommandHandler<CreateActivity>, CreateActivityHandler> ();
             services.AddScoped<IActivityRepository, ActivityRepository> ();
             services.AddScoped<ICategoryRepository, CategoryRepository> ();

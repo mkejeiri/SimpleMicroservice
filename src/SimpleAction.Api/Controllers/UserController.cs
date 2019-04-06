@@ -14,8 +14,10 @@ namespace SimpleAction.Api.Controllers {
         }
 
         [HttpPost ("register")]
-        public async Task<IActionResult> Post ([FromBody] CreateUser command) {         
+        public async Task<IActionResult> Post ([FromBody] CreateUser command) {  
+            System.Console.WriteLine("Post method : creating user");       
             await _busClient.PublishAsync (command);
+            System.Console.WriteLine("Post method : publishing user");
             return Accepted();
         }
 

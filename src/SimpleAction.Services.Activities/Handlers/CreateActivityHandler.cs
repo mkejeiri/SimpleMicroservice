@@ -33,7 +33,7 @@ namespace SimpleAction.Services.Activities.Handlers {
             try {
                 await _activityService.AddAsync (createActivity.Id, createActivity.UserId, createActivity.Category, createActivity.Name,
                     createActivity.Description, createActivity.CreatedAt);
-                await _busClient.PublishAsync (new ActivityCreated (createActivity.Id, createActivity.Category, createActivity.Name, createActivity.Description, createActivity.CreatedAt));
+                await _busClient.PublishAsync (new ActivityCreated (createActivity.Id,createActivity.UserId, createActivity.Category, createActivity.Name, createActivity.Description, createActivity.CreatedAt));
             } catch (ActionException ex) {
                  await _busClient.PublishAsync (new CreateActivityRejected(createActivity.Id,ex.Code,ex.Message ));
                  _logger.LogInformation(ex.Message);

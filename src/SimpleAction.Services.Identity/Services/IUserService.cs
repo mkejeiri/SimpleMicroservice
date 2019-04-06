@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using SimpleAction.Common.Auth;
 
 namespace SimpleAction.Services.Identity.Services
 {
@@ -6,7 +7,7 @@ namespace SimpleAction.Services.Identity.Services
     {
          Task RegisterAsync(string email, string password, string name);
          //this will return a token
-         Task LoginAsync(string email, string password);
+         Task<MyJsonWebToken> LoginAsync(string email, string password);
          
     }
 }

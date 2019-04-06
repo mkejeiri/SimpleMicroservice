@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using SimpleAction.Common.Auth;
 using SimpleAction.Common.Commands;
 using SimpleAction.Common.Mongo;
 using SimpleAction.Common.RabbitMq;
@@ -35,6 +36,7 @@ namespace SimpleAction.Services.Identity {
             services.AddLogging ();
             services.AddRabbitMq (Configuration);
             services.AddMongoDB (Configuration);
+            services.AddJwt(Configuration);
             services.AddScoped<ICommandHandler<CreateUser>, CreateUserHandler> ();
             services.AddScoped<IEncrypter, Encrypter> ();
             services.AddScoped<IUserRepository, UserRepository> ();
