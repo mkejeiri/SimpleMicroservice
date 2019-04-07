@@ -81,7 +81,39 @@ docker tag simpleapi mkejeiri/simpleapi
 docker login
 docker push mkejeiri/simpleapi / docker pull mkejeiri/simpleapi
 
-#deployment into VM in the cloud 
+#deployment into VM in the cloud
+connect remotely to the machine such as digital ocean : ssh root@160.89.20.45
+apt-update  	 	
+apt install docker.io -y
+apt install docker-compose -y
+#inside docker-compose.yaml file change all build's to image's mkejeiri/* from docker hub (docker push mkejeiri/simpleapi)
+nano docker-compose.yaml #and past the changed content	
+docker-compose run start-dependencies # get all dependencies from docker hub
+docker-compose up
+cd /ect/nginx/sites-enabled/
+rm default
+nano default #and past the content of nginx.config file
+#start nginx 
+service nginx restart
+cd ~
+docker-compose run start-dependencies # get all dependencies from docker hub
+docker-compose up #run all the microervices 
+go to http://160.89.20.45 #and msg pops up.
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 
 
