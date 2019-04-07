@@ -13,23 +13,20 @@
         "packagesPath": "/home/dev/.nuget/packages/",
         "outputPath": "/home/dev/SimpleAction/src/SimpleAction.Api/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/opt/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "/home/dev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp2.2"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp2.2": {
             "projectReferences": {
               "/home/dev/SimpleAction/src/SimpleAction.Common/SimpleAction.Common.csproj": {
                 "projectPath": "/home/dev/SimpleAction/src/SimpleAction.Common/SimpleAction.Common.csproj"
@@ -44,47 +41,52 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp2.2": {
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
-              "target": "Package",
-              "version": "[3.0.0-preview3-19153-02, )"
-            },
-            "Microsoft.NETCore.Platforms": {
+            "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview3.19128.7, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
             },
-            "Microsoft.WindowsDesktop.App": {
-              "include": "None",
+            "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview3-27504-2, )",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.8.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.1, )"
             },
             "RawRabbit": {
               "target": "Package",
-              "version": "[2.0.0-rc5, )"
+              "version": "[2.0.0-rc2, )"
             },
             "RawRabbit.DependencyInjection.ServiceCollection": {
               "target": "Package",
-              "version": "[2.0.0-rc5, )"
+              "version": "[2.0.0-rc1, )"
             },
             "RawRabbit.Operations.Publish": {
               "target": "Package",
-              "version": "[2.0.0-rc5, )"
+              "version": "[2.0.0-rc1, )"
             },
             "RawRabbit.Operations.Subscribe": {
               "target": "Package",
-              "version": "[2.0.0-rc5, )"
-            },
-            "runtime.linux-x64.Microsoft.NETCore.DotNetAppHost": {
-              "include": "None",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview3-27503-5, )",
-              "autoReferenced": true
+              "version": "[2.0.0-rc1, )"
             }
           },
           "imports": [
@@ -104,6 +106,9 @@
         "packagesPath": "/home/dev/.nuget/packages/",
         "outputPath": "/home/dev/SimpleAction/src/SimpleAction.Common/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/opt/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "/home/dev/.nuget/NuGet/NuGet.Config"
         ],
@@ -111,13 +116,7 @@
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -135,7 +134,7 @@
           "dependencies": {
             "Microsoft.AspNetCore": {
               "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -145,11 +144,23 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.IdentityModel.tokens": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[5.4.0, )"
             },
-            "MongoDb.Driver": {
+            "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.8.0, )"
             },
@@ -161,19 +172,23 @@
             },
             "RawRabbit": {
               "target": "Package",
-              "version": "[2.0.0-rc5, )"
+              "version": "[2.0.0-rc2, )"
             },
             "RawRabbit.DependencyInjection.ServiceCollection": {
               "target": "Package",
-              "version": "[2.0.0-rc5, )"
+              "version": "[2.0.0-rc1, )"
             },
             "RawRabbit.Operations.Publish": {
               "target": "Package",
-              "version": "[2.0.0-rc5, )"
+              "version": "[2.0.0-rc1, )"
             },
             "RawRabbit.Operations.Subscribe": {
               "target": "Package",
-              "version": "[2.0.0-rc5, )"
+              "version": "[2.0.0-rc1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.4.0, )"
             }
           },
           "imports": [

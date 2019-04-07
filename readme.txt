@@ -38,7 +38,10 @@ dotnet run --urls "https://*:5051"
  dotnet sln add tests/SimpleAction.Api.Tests/SimpleAction.Api.Tests.csproj
  dotnet sln add tests/SimpleAction.Services.*
 
- #Add the following packages (relevant to Xunit)
+#Add the following packages (relevant to Xunit)
 dotnet add package FluentAssertions
 dotnet add package Microsoft.NETCore.TestHost
 dotnet add package Moq
+
+#doc to fluent assertions
+https://fluentassertions.com/documentation/

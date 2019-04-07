@@ -13,23 +13,20 @@
         "packagesPath": "/home/dev/.nuget/packages/",
         "outputPath": "/home/dev/SimpleAction/tests/SimpleAction.Services.Identity.Tests/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/opt/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "/home/dev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp2.2"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp2.2": {
             "projectReferences": {}
           }
         },
@@ -40,7 +37,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp2.2": {
           "dependencies": {
             "FluentAssertions": {
               "target": "Package",
@@ -48,28 +45,21 @@
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.0.0-preview-20181205-02, )"
+              "version": "[16.0.1, )"
             },
-            "Microsoft.NETCore.Platforms": {
+            "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview3.19128.7, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
             },
             "Microsoft.NETCore.TestHost": {
               "target": "Package",
               "version": "[2.0.8, )"
             },
-            "Microsoft.WindowsDesktop.App": {
-              "include": "None",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview3-27504-2, )",
-              "autoReferenced": true
-            },
             "Moq": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[4.10.1, )"
             },
             "xunit": {
               "target": "Package",
