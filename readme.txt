@@ -45,3 +45,57 @@ dotnet add package Moq
 
 #doc to fluent assertions
 https://fluentassertions.com/documentation/
+
+#begining building a dockerized .net app
+dotnet publish -c Release -o ./bin/Docker
+
+#create a dockerfile and fill it : https://docs.docker.com/engine/examples/dotnetcore/
+
+#build simpleaction.api image in the current DIR (.)
+docker pull microsoft/dotnet:2.2-aspnetcore-runtime
+docker build -t simpleaction.api ./
+
+#for all traffic in port 80 make them available in 5000
+docker run -p 80:5000 simpleaction.api
+
+
+
+#for all traffic in port 80 make them available in 5000 (nat operation)
+#run docker as daemon/service (d) in the background.
+docker run -d 80:5000
+
+#add property because Microsoft.AspNetCore.All assume the dll's are available in the DIR which not the case;
+<PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest> 
+#run all from the begining
+
+
+#Docker compose instead of the doing by it hand each time for all services which is tedious!
+
+docker-compose run start-dependencies #start-dependencies first look at the file docker-compose.yaml
+
+docker-compose up # will start all images
+
+#pushing to a docker hub
+#tag the image
+docker tag simpleapi mkejeiri/simpleapi
+docker login
+docker push mkejeiri/simpleapi / docker pull mkejeiri/simpleapi
+
+#deployment into VM in the cloud 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
