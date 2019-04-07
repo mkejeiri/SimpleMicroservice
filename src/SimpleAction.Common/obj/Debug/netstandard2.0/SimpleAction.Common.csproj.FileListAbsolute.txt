@@ -1,9 +1,0 @@
-/home/dev/SimpleAction/src/SimpleAction.Common/bin/Debug/netstandard2.0/SimpleAction.Common.deps.json
-/home/dev/SimpleAction/src/SimpleAction.Common/bin/Debug/netstandard2.0/SimpleAction.Common.dll
-/home/dev/SimpleAction/src/SimpleAction.Common/bin/Debug/netstandard2.0/SimpleAction.Common.pdb
-/home/dev/SimpleAction/src/SimpleAction.Common/obj/Debug/netstandard2.0/SimpleAction.Common.csprojAssemblyReference.cache
-/home/dev/SimpleAction/src/SimpleAction.Common/obj/Debug/netstandard2.0/SimpleAction.Common.csproj.CoreCompileInputs.cache
-/home/dev/SimpleAction/src/SimpleAction.Common/obj/Debug/netstandard2.0/SimpleAction.Common.AssemblyInfoInputs.cache
-/home/dev/SimpleAction/src/SimpleAction.Common/obj/Debug/netstandard2.0/SimpleAction.Common.AssemblyInfo.cs
-/home/dev/SimpleAction/src/SimpleAction.Common/obj/Debug/netstandard2.0/SimpleAction.Common.dll
-/home/dev/SimpleAction/src/SimpleAction.Common/obj/Debug/netstandard2.0/SimpleAction.Common.pdb
